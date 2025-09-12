@@ -1,0 +1,3 @@
+cps_impress>=1.0.9
+quarto-cli
+dotenv

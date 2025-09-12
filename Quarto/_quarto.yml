@@ -1,0 +1,44 @@
+project:
+  type: book
+  output-dir: Docs
+
+execute:
+  output: asis
+  echo: false
+
+book:  
+  language: de
+  title: "deckenmalerei"
+  author: "ASKCR"
+  date: today
+  chapters:
+    - index.qmd
+    - section1.qmd
+    - section2.qmd
+    - section3.qmd
+  downloads: [pdf, epub, docx]
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      dark: solar
+      light: default
+
+  pdf:
+    documentclass: scrreprt
+    include-in-header: 
+      text: |
+        \usepackage{makeidx}
+        \makeindex
+        \let\oldincludegraphics\includegraphics
+        \renewcommand{\includegraphics}[2][]{%
+          \oldincludegraphics[width=\linewidth,height=0.70\textheight,keepaspectratio,#1]{#2}%
+        }
+    include-after-body: 
+      text: |
+        \printindex
+    pdf-engine: pdflatex
+  epub: default
+  docx: default

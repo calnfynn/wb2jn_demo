@@ -1,0 +1,18 @@
+---
+format: 
+  html: default
+  ipynb: default
+  pdf: default
+format-links: [ipynb,html,pdf]
+#code-fold: true
+execute:
+  echo: false
+  output: asis
+---
+
+# Preface {.unnumbered}
+
+
+This is a Quarto book.
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>.

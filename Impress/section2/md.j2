@@ -1,0 +1,20 @@
+# Liste (Malereien): {{ rs["castle_label"] }}
+{% for malereien in rs["bindings"] %}
+{% set malerei = rs["bindings"][malereien] %}
+
+## {{ malerei[0]["itemLabel"] }}
+
+Wikibase: [{{ malerei[0]["itemLabel"] }}]({{ malerei[0]["item"] }})
+{% for foto in malerei %}
+
+![{{ foto["itemLabel"] }}. Foto: {{ foto["creator"] }}]({{ foto["photo"] }}){group="photos"}
+
+Foto: {{ foto["creator"] }}
+Objektart: {{ foto["itemTypeLabel"] }}
+Raum: [{{ foto["parentLabel"] }}]({{ foto["parent"] }})
+{% endfor %} {# foto #}
+
+---
+
+\newpage
+{% endfor %} {# malereien #}

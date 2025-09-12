@@ -1,0 +1,15 @@
+__pycache__
+*.pyc
+*~
+*.swp
+.env
+
+Notebook/.ipynb_checkpoints
+
+Quarto/.quarto
+Quarto/.gitignore
+Quarto/Docs
+Quarto/section1.qmd
+Quarto/section2.qmd
+Quarto/section3.qmd
+Quarto/*.jpeg
