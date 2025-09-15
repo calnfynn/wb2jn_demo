@@ -14,7 +14,7 @@ book:
   chapters:
     - index.qmd
     - section1.qmd
-    - section2.qmd
+#    - section2.qmd
     - section3.qmd
   downloads: [pdf, epub, docx]
 

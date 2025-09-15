@@ -7,6 +7,7 @@ __pycache__
 Notebook/.ipynb_checkpoints
 
 Quarto/.quarto
+Quarto/_book/
 Quarto/.gitignore
 Quarto/Docs
 Quarto/section1.qmd

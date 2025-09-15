@@ -17,14 +17,15 @@
 # with cps_coffeebook. If not, see http://www.gnu.org/licenses/
 #
 
-SECTIONS := section1.qmd section2.qmd section3.qmd
+SECTIONS := section1.qmd section3.qmd
+# section2.qmd
 
 book:$(SECTIONS)
 	quarto render
 
 $(SECTIONS):
 	sparql section1 -n -t md -f section1.qmd
-	sparql section2 -n -t md -f section2.qmd
+#	sparql section2 -n -t md -f section2.qmd
 	sparql section3 -n -t md -f section3.qmd
 
 # AMD64
