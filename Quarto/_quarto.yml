@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: Docs
+  output-dir: ../docs
 
 execute:
   output: asis
