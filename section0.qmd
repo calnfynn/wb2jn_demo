@@ -1,0 +1,9 @@
+# rs["itemLabel"] 
+
+Wikibase-Eintrag: [rs["item"]](rs["item"])
+
+rs["address"]
+
+![Photo: rs["creator"]](rs["photo"])
+
+\newpage

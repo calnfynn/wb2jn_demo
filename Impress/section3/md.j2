@@ -1,23 +1,21 @@
 # Liste (Schloss): {{ rs["castle_label"] }}
-{% for schloss in rs["bindings"] %}
 
-## {{ schloss }}\index{ {{- schloss -}} }
+{% macro render_node(node, depth=2) %}
+{{ "#" * depth }} {{ node.label }}\index{ {{ node.label }} }
 
-Wikibase-Eintrag: [{{ schloss }} (Raum)]({{ rs["bindings"][schloss]["parent"] }})
-{% for malerei in rs["bindings"][schloss]["painting"] %}
+Wikibase-Eintrag: [{{ node.label }}]({{ node.id }})
 
-### {{ malerei }}\index{ {{- schloss -}} !{{ malerei -}} }
-{% set ns = namespace(header = false) %}
-{% for foto in rs["bindings"][schloss]["painting"][malerei] %}
-
-{% if ns.header == false %}
-Wikibase-Eintrag: [{{ malerei }} (Kunstwerk)]({{ foto["item"] }})
-
-{% set ns.header = true %}
+{% if node.photo %}
+![Photo: {{ node.creator }}]({{ node.photo }}){group='room-gallery'}
 {% endif %}
-![Photo: {{ foto["creator"] }}]({{ foto["photo"] }}){group='room-gallery'}
-{% endfor %} {# foto #}
-{% endfor %} {# malerei #}
+
+{% for child in node.children %}
+{{ render_node(child, depth + 1) }}
+{% endfor %}
+{% endmacro %}
+
+{% for root in rs["tree"] %}
+{{ render_node(root) }}
 
 \newpage
-{% endfor %} {# schloss #}
+{% endfor %}

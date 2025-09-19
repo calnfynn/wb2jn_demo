@@ -13,6 +13,7 @@ book:
   date: today
   chapters:
     - index.qmd
+    - section0.qmd
     - section1.qmd
 #    - section2.qmd
     - section3.qmd

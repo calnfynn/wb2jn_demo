@@ -1,0 +1,23 @@
+# Liste (Schloss): {{ rs["castle_label"] }}
+{% for schloss in rs["bindings"] %}
+
+## {{ schloss }}\index{ {{- schloss -}} }
+
+Wikibase-Eintrag: [{{ schloss }} (Raum)]({{ rs["bindings"][schloss]["parent"] }})
+{% for malerei in rs["bindings"][schloss]["painting"] %}
+
+### {{ malerei }}\index{ {{- schloss -}} !{{ malerei -}} }
+{% set ns = namespace(header = false) %}
+{% for foto in rs["bindings"][schloss]["painting"][malerei] %}
+
+{% if ns.header == false %}
+Wikibase-Eintrag: [{{ malerei }} (Kunstwerk)]({{ foto["item"] }})
+
+{% set ns.header = true %}
+{% endif %}
+![Photo: {{ foto["creator"] }}]({{ foto["photo"] }}){group='room-gallery'}
+{% endfor %} {# foto #}
+{% endfor %} {# malerei #}
+
+\newpage
+{% endfor %} {# schloss #}

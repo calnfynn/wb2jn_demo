@@ -107,8 +107,8 @@ An environment file .env is used to contain configuration data. See “dotenv”
 
 The cps_impress project directory contains project subdirectories each with at least two files:
 
-*query.py
-template.j2* 
+*query.py*  
+*template.j2* 
 
 The query.py file has two methods, one to return the SPARQL query string for CPS Impress and the other to filter the SPARQL query results.
 
@@ -139,6 +139,16 @@ Initially you may require Latex support to be installed, this can be achieved by
 To generate the demo documents, enter make (Jupyter Notebooks needs to be running for this):
 
     make
+
+### Adding or changing sections
+
+To add a section, create a new folder in the *Impress* directory and add a *query.py* and a *md.j2* file. To edit a section, simple edit the file(s).
+
+Navigate to your Quarto directory and run this command to update or add your content:
+
+	sparql SECTIONNAME -n -t md -f SECTIONNAME.qmd
+
+Add your new section to `book: chapters:` in *_quarto.yml*. 
 
 
 ##### 1
