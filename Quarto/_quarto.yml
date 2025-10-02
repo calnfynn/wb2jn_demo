@@ -26,7 +26,11 @@ format:
     theme:
       dark: solar
       light: default
+    toc: true
+    toc-depth: 5
+    lightbox: true
 
+    
   pdf:
     documentclass: scrreprt
     include-in-header: 

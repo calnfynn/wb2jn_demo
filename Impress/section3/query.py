@@ -30,87 +30,102 @@ def query(args):
     castle_ID = "Q68" if "castle_ID" not in args else args["castle_ID"]
 
     return f"""
-    PREFIX wd: <https://wikibase.kewl.org/entity/>
-    PREFIX wdt: <https://wikibase.kewl.org/prop/direct/>
-    PREFIX p: <https://wikibase.kewl.org/prop/>
-    PREFIX ps: <https://wikibase.kewl.org/prop/statement/>
-    PREFIX pq: <https://wikibase.kewl.org/prop/qualifier/>
-    PREFIX wikibase: <http://wikiba.se/ontology#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX bd: <http://www.bigdata.com/rdf#>
-
-    SELECT DISTINCT ?item ?itemLabel ?itemDescription ?itemTypeLabel ?photo ?creator ?parent ?parentLabel ?castleLabel WHERE {{
-      ?item (wdt:P3+) wd:{castle_ID};
-            wdt:P1 ?itemType .
-      OPTIONAL {{ ?item wdt:P3 ?parent. }}
+    SELECT DISTINCT ?item ?itemLabel ?itemDescription ?itemTypeLabel ?photo ?creator ?parent ?parentLabel ?castleLabel
+    WHERE {{
+      {{ BIND(wd:Q68 AS ?item) }}
+      UNION
+      {{
+        ?item (wdt:P3+) wd:Q68;
+        wdt:P1 ?itemType .
+      }}
+      OPTIONAL {{ ?item wdt:P3 ?parent . }}
       OPTIONAL {{
-        ?item p:P6 ?statement.
-        ?statement ps:P6 ?photo.
+        ?item p:P6 ?statement .
+        ?statement ps:P6 ?photo .
         OPTIONAL {{ ?statement pq:P11 ?creator. }}
       }}
       BIND(wd:{castle_ID} AS ?castle)
-      SERVICE wikibase:label {{ bd:serviceParam wikibase:language "de". }}
+      SERVICE wikibase:label {{ bd:serviceParam wikibase:language "de" }}
     }}
-    ORDER BY (?item)
+    ORDER BY ?item
     """
 
+def filter(rs, castle_id=None):
+    bindings = [
+        {k: (v["value"] if isinstance(v, dict) else v) for k, v in row.items()}
+        for row in rs["bindings"]
+    ]
 
-def build_tree(rows):
-    """
-    Build a nested dict (pyramid) of items based on parent/child relationships.
-    """
-    nodes = {}
-    children_map = {}
-
-    # Prepare nodes and track children
-    for row in rows:
-        qid = row["item"]["value"].split("/")[-1]
-        label = row.get("itemLabel", {}).get("value", qid)
-        parent = row.get("parent", {}).get("value")
-        parent_qid = parent.split("/")[-1] if parent else None
-
-        # Cache photos
-        if "photo" in row and "value" in row["photo"]:
-            obj = URLCache(row["photo"]["value"])
+    # Cache photos
+    for row in bindings:
+        if "photo" in row and row["photo"]:
+            obj = URLCache(row["photo"])
             row["photo"] = os.path.basename(obj.cache_file)
 
-        # Initialize node
-        nodes[qid] = {
-            "id": qid,
-            "label": label,
-            "description": row.get("itemDescription", {}).get("value"),
-            "type": row.get("itemTypeLabel", {}).get("value"),
-            "photo": row.get("photo"),
-            "creator": row.get("creator", {}).get("value"),
+    # Index by item ID
+    items = {}
+    for row in bindings:
+        item_id = row["item"]
+        if item_id not in items:
+            items[item_id] = {
+                "item": item_id,
+                "itemLabel": row.get("itemLabel"),
+                "itemDescription": row.get("itemDescription"),
+                "itemTypeLabel": row.get("itemTypeLabel"),
+                "photos": [],
+            }
+        if row.get("photo"):
+            items[item_id]["photos"].append({
+                "url": row["photo"],
+                "creator": row.get("creator"),
+            })
+
+    # Group children by parent
+    children_map = {}
+    for row in bindings:
+        parent = row.get("parent")
+        if parent:
+            children_map.setdefault(parent, set()).add(row["item"])
+
+    def build_tree(item_id, seen=None):
+        if seen is None:
+            seen = set()
+        if item_id in seen:
+            return None  # skip cycles
+        seen.add(item_id)
+
+        row = items.get(item_id, {"itemLabel": None})
+        node = {
+            "id": item_id,
+            "label": row.get("itemLabel") or row.get("parentLabel"),
+            "description": row.get("itemDescription"),
+            "type": row.get("itemTypeLabel"),
+            "photos": row.get("photos"),
+            "creator": row.get("creator"),
             "children": []
         }
 
-        # Track parent relationship
-        if parent_qid:
-            children_map.setdefault(parent_qid, []).append(qid)
+        added_labels = set()
+        for child_id in children_map.get(item_id, []):
+            child_node = build_tree(child_id, seen.copy())
+            if child_node and child_node["label"] not in added_labels:
+                node["children"].append(child_node)
+                added_labels.add(child_node["label"])
 
-    # Link children into parents
-    for parent_qid, child_qids in children_map.items():
-        if parent_qid in nodes:
-            for cq in child_qids:
-                if cq in nodes:
-                    nodes[parent_qid]["children"].append(nodes[cq])
+        return node
 
-    # Find roots (no parent)
-    roots = [
-        node for qid, node in nodes.items()
-        if all(qid not in child_qids for child_qids in children_map.values())
-    ]
+    if castle_id is None and bindings:
+        castle_id = bindings[0].get("castle") or bindings[0]["item"]
+    if not castle_id:
+        return {"castle_label": None, "tree": None}
 
-    return roots
+    root_uri = (
+        castle_id if castle_id.startswith("http") else f"https://wikibase.kewl.org/entity/{castle_id}"
+    )
+    tree = build_tree(root_uri)
 
+    return {
+        "castle_label": bindings[0].get("castleLabel") if bindings else None,
+        "tree": tree,
+    }
 
-def filter(rs):
-    roots = build_tree(rs["bindings"])
-    d = {"castle_label": rs["bindings"][0]["castleLabel"]["value"]}
-    d["tree"] = roots
-    return d
-
-
-if __name__ == "__main__":
-    main()

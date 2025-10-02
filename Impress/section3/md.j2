@@ -1,21 +1,24 @@
-# Liste (Schloss): {{ rs["castle_label"] }}
+{% macro render(node, depth=1) -%}
+{{ "#" * depth }} {{ node['label'] }}  
 
-{% macro render_node(node, depth=2) %}
-{{ "#" * depth }} {{ node.label }}\index{ {{ node.label }} }
+{% if node['photos'] %}
+  {% for photo in node['photos'] %}
+![{{ node["label"] }}. Foto: {{ photo["creator"] }}]({{ photo["url"] }}){group="photos"}
 
-Wikibase-Eintrag: [{{ node.label }}]({{ node.id }})
-
-{% if node.photo %}
-![Photo: {{ node.creator }}]({{ node.photo }}){group='room-gallery'}
+  {% endfor %}
 {% endif %}
 
-{% for child in node.children %}
-{{ render_node(child, depth + 1) }}
-{% endfor %}
-{% endmacro %}
+{% if node["id"] %}
+Wikibase: [{{ node["label"] }}]({{ node["id"] }}) ({{ node["type"] }})
+{% endif %}
 
-{% for root in rs["tree"] %}
-{{ render_node(root) }}
+---
 
-\newpage
-{% endfor %}
+{% if node['children'] %}
+  {% for child in node['children'] %}
+{{ render(child, depth + 1) }}
+  {% endfor %}
+{% endif %}
+{%- endmacro %}
+
+{{ render(rs["tree"]) }}
