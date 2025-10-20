@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Stuttgart, Schloss Solitude – deckenmalerei</title>
+<title>Stuttgart, Schloss Solitude – Ein Gemäldekatalog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,12 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e548feee9d9b2388b97d0606b52115ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4224419dfc7caf08b3e322f9b1767e55.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b3de7175a6ecf7c4f2abbcc948ad87ec.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-fed52b1af695f4466d7f931a4915c288.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -77,167 +75,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = true;
-    const darkModeDefault = authorPrefersDark;
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -246,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./section3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Stuttgart, Schloss Solitude</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./section3.html"><span class="chapter-title">Stuttgart, Schloss Solitude</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -261,32 +99,31 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">deckenmalerei</a> 
+      <a href="./">Ein Gemäldekatalog</a> 
         <div class="sidebar-tools-main">
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="./deckenmalerei.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="./Ein-Gemäldekatalog.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="./deckenmalerei.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="./Ein-Gemäldekatalog.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="./deckenmalerei.docx">
+            <a class="dropdown-item sidebar-tools-main-item" href="./Ein-Gemäldekatalog.docx">
               <i class="bi bi-file-word pe-1"></i>
             Download Docx
             </a>
           </li>
       </ul>
     </div>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
@@ -305,20 +142,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section0.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Stuttgart, Schloss Solitude</span></span></a>
+  <a href="./section1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ausstellung: Stuttgart, Schloss Solitude</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./section1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ausstellung: Stuttgart, Schloss Solitude</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./section3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Stuttgart, Schloss Solitude</span></span></a>
+  <a href="./section3.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Stuttgart, Schloss Solitude</span></a>
   </div>
 </li>
     </ul>
@@ -331,60 +160,60 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#stuttgart-schloss-solitude-kavaliershäuser" id="toc-stuttgart-schloss-solitude-kavaliershäuser" class="nav-link active" data-scroll-target="#stuttgart-schloss-solitude-kavaliershäuser"><span class="header-section-number">3.1</span> Stuttgart, Schloss Solitude, Kavaliershäuser</a>
+  <li><a href="#stuttgart-schloss-solitude-kavaliershäuser" id="toc-stuttgart-schloss-solitude-kavaliershäuser" class="nav-link active" data-scroll-target="#stuttgart-schloss-solitude-kavaliershäuser">Stuttgart, Schloss Solitude, Kavaliershäuser</a>
   <ul>
-  <li><a href="#sommerspeisesaal" id="toc-sommerspeisesaal" class="nav-link" data-scroll-target="#sommerspeisesaal"><span class="header-section-number">3.1.1</span> Sommerspeisesaal</a>
+  <li><a href="#sommerspeisesaal" id="toc-sommerspeisesaal" class="nav-link" data-scroll-target="#sommerspeisesaal">Sommerspeisesaal</a>
   <ul>
-  <li><a href="#sommerspeisesaal-1" id="toc-sommerspeisesaal-1" class="nav-link" data-scroll-target="#sommerspeisesaal-1"><span class="header-section-number">3.1.1.1</span> Sommerspeisesaal</a>
+  <li><a href="#sommerspeisesaal-1" id="toc-sommerspeisesaal-1" class="nav-link" data-scroll-target="#sommerspeisesaal-1">Sommerspeisesaal</a>
   <ul class="collapse">
-  <li><a href="#wanddekoration-mit-blumengirlanden" id="toc-wanddekoration-mit-blumengirlanden" class="nav-link" data-scroll-target="#wanddekoration-mit-blumengirlanden"><span class="header-section-number">3.1.1.1.1</span> Wanddekoration mit Blumengirlanden</a></li>
+  <li><a href="#wanddekoration-mit-blumengirlanden" id="toc-wanddekoration-mit-blumengirlanden" class="nav-link" data-scroll-target="#wanddekoration-mit-blumengirlanden">Wanddekoration mit Blumengirlanden</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
-  <li><a href="#stuttgart-schloss-solitude-kavaliersbauten" id="toc-stuttgart-schloss-solitude-kavaliersbauten" class="nav-link" data-scroll-target="#stuttgart-schloss-solitude-kavaliersbauten"><span class="header-section-number">3.2</span> Stuttgart, Schloss Solitude, Kavaliersbauten</a>
+  <li><a href="#stuttgart-schloss-solitude-kavaliersbauten" id="toc-stuttgart-schloss-solitude-kavaliersbauten" class="nav-link" data-scroll-target="#stuttgart-schloss-solitude-kavaliersbauten">Stuttgart, Schloss Solitude, Kavaliersbauten</a>
   <ul>
-  <li><a href="#schlosskapelle" id="toc-schlosskapelle" class="nav-link" data-scroll-target="#schlosskapelle"><span class="header-section-number">3.2.1</span> Schlosskapelle</a>
+  <li><a href="#schlosskapelle" id="toc-schlosskapelle" class="nav-link" data-scroll-target="#schlosskapelle">Schlosskapelle</a>
   <ul>
-  <li><a href="#vestibül-der-herrschaftsloge" id="toc-vestibül-der-herrschaftsloge" class="nav-link" data-scroll-target="#vestibül-der-herrschaftsloge"><span class="header-section-number">3.2.1.1</span> Vestibül der Herrschaftsloge</a>
+  <li><a href="#vestibül-der-herrschaftsloge" id="toc-vestibül-der-herrschaftsloge" class="nav-link" data-scroll-target="#vestibül-der-herrschaftsloge">Vestibül der Herrschaftsloge</a>
   <ul class="collapse">
-  <li><a href="#moses-mit-den-gesetzestafeln" id="toc-moses-mit-den-gesetzestafeln" class="nav-link" data-scroll-target="#moses-mit-den-gesetzestafeln"><span class="header-section-number">3.2.1.1.1</span> Moses mit den Gesetzestafeln</a></li>
+  <li><a href="#moses-mit-den-gesetzestafeln" id="toc-moses-mit-den-gesetzestafeln" class="nav-link" data-scroll-target="#moses-mit-den-gesetzestafeln">Moses mit den Gesetzestafeln</a></li>
   </ul></li>
-  <li><a href="#kapellenraum" id="toc-kapellenraum" class="nav-link" data-scroll-target="#kapellenraum"><span class="header-section-number">3.2.1.2</span> Kapellenraum</a>
+  <li><a href="#kapellenraum" id="toc-kapellenraum" class="nav-link" data-scroll-target="#kapellenraum">Kapellenraum</a>
   <ul class="collapse">
-  <li><a href="#auferstehung-christi" id="toc-auferstehung-christi" class="nav-link" data-scroll-target="#auferstehung-christi"><span class="header-section-number">3.2.1.2.1</span> Auferstehung Christi</a></li>
+  <li><a href="#auferstehung-christi" id="toc-auferstehung-christi" class="nav-link" data-scroll-target="#auferstehung-christi">Auferstehung Christi</a></li>
   </ul></li>
-  <li><a href="#herrschaftsloge" id="toc-herrschaftsloge" class="nav-link" data-scroll-target="#herrschaftsloge"><span class="header-section-number">3.2.1.3</span> Herrschaftsloge</a>
+  <li><a href="#herrschaftsloge" id="toc-herrschaftsloge" class="nav-link" data-scroll-target="#herrschaftsloge">Herrschaftsloge</a>
   <ul class="collapse">
-  <li><a href="#die-andacht" id="toc-die-andacht" class="nav-link" data-scroll-target="#die-andacht"><span class="header-section-number">3.2.1.3.1</span> Die Andacht</a></li>
+  <li><a href="#die-andacht" id="toc-die-andacht" class="nav-link" data-scroll-target="#die-andacht">Die Andacht</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
-  <li><a href="#stuttgart-schloss-solitude-lustschloss" id="toc-stuttgart-schloss-solitude-lustschloss" class="nav-link" data-scroll-target="#stuttgart-schloss-solitude-lustschloss"><span class="header-section-number">3.3</span> Stuttgart, Schloss Solitude, Lustschloss</a>
+  <li><a href="#stuttgart-schloss-solitude-lustschloss" id="toc-stuttgart-schloss-solitude-lustschloss" class="nav-link" data-scroll-target="#stuttgart-schloss-solitude-lustschloss">Stuttgart, Schloss Solitude, Lustschloss</a>
   <ul>
-  <li><a href="#erschließungsraumfolge-des-schlosses" id="toc-erschließungsraumfolge-des-schlosses" class="nav-link" data-scroll-target="#erschließungsraumfolge-des-schlosses"><span class="header-section-number">3.3.1</span> Erschließungsraumfolge des Schlosses</a>
+  <li><a href="#erschließungsraumfolge-des-schlosses" id="toc-erschließungsraumfolge-des-schlosses" class="nav-link" data-scroll-target="#erschließungsraumfolge-des-schlosses">Erschließungsraumfolge des Schlosses</a>
   <ul>
-  <li><a href="#saal" id="toc-saal" class="nav-link" data-scroll-target="#saal"><span class="header-section-number">3.3.1.1</span> Saal</a>
+  <li><a href="#saal" id="toc-saal" class="nav-link" data-scroll-target="#saal">Saal</a>
   <ul class="collapse">
-  <li><a href="#zwickelfelder-der-voute" id="toc-zwickelfelder-der-voute" class="nav-link" data-scroll-target="#zwickelfelder-der-voute"><span class="header-section-number">3.3.1.1.1</span> Zwickelfelder der Voute</a></li>
-  <li><a href="#die-regierung-herzog-carl-eugens-befördert-das-wohlergehen-des-landes" id="toc-die-regierung-herzog-carl-eugens-befördert-das-wohlergehen-des-landes" class="nav-link" data-scroll-target="#die-regierung-herzog-carl-eugens-befördert-das-wohlergehen-des-landes"><span class="header-section-number">3.3.1.1.2</span> Die Regierung Herzog Carl Eugens befördert das Wohlergehen des Landes</a></li>
+  <li><a href="#zwickelfelder-der-voute" id="toc-zwickelfelder-der-voute" class="nav-link" data-scroll-target="#zwickelfelder-der-voute">Zwickelfelder der Voute</a></li>
+  <li><a href="#die-regierung-herzog-carl-eugens-befördert-das-wohlergehen-des-landes" id="toc-die-regierung-herzog-carl-eugens-befördert-das-wohlergehen-des-landes" class="nav-link" data-scroll-target="#die-regierung-herzog-carl-eugens-befördert-das-wohlergehen-des-landes">Die Regierung Herzog Carl Eugens befördert das Wohlergehen des Landes</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#prunkappartement-herzog-carl-eugens" id="toc-prunkappartement-herzog-carl-eugens" class="nav-link" data-scroll-target="#prunkappartement-herzog-carl-eugens"><span class="header-section-number">3.3.2</span> Prunkappartement Herzog Carl Eugens</a>
+  <li><a href="#prunkappartement-herzog-carl-eugens" id="toc-prunkappartement-herzog-carl-eugens" class="nav-link" data-scroll-target="#prunkappartement-herzog-carl-eugens">Prunkappartement Herzog Carl Eugens</a>
   <ul>
-  <li><a href="#palmenzimmer" id="toc-palmenzimmer" class="nav-link" data-scroll-target="#palmenzimmer"><span class="header-section-number">3.3.2.1</span> Palmenzimmer</a>
+  <li><a href="#palmenzimmer" id="toc-palmenzimmer" class="nav-link" data-scroll-target="#palmenzimmer">Palmenzimmer</a>
   <ul class="collapse">
-  <li><a href="#aurora" id="toc-aurora" class="nav-link" data-scroll-target="#aurora"><span class="header-section-number">3.3.2.1.1</span> Aurora</a></li>
+  <li><a href="#aurora" id="toc-aurora" class="nav-link" data-scroll-target="#aurora">Aurora</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#sockelgeschoss" id="toc-sockelgeschoss" class="nav-link" data-scroll-target="#sockelgeschoss"><span class="header-section-number">3.3.3</span> Sockelgeschoss</a>
+  <li><a href="#sockelgeschoss" id="toc-sockelgeschoss" class="nav-link" data-scroll-target="#sockelgeschoss">Sockelgeschoss</a>
   <ul>
-  <li><a href="#loggia-zimmer" id="toc-loggia-zimmer" class="nav-link" data-scroll-target="#loggia-zimmer"><span class="header-section-number">3.3.3.1</span> Loggia-Zimmer</a>
+  <li><a href="#loggia-zimmer" id="toc-loggia-zimmer" class="nav-link" data-scroll-target="#loggia-zimmer">Loggia-Zimmer</a>
   <ul class="collapse">
-  <li><a href="#ruinenlandschaften" id="toc-ruinenlandschaften" class="nav-link" data-scroll-target="#ruinenlandschaften"><span class="header-section-number">3.3.3.1.1</span> Ruinenlandschaften</a></li>
+  <li><a href="#ruinenlandschaften" id="toc-ruinenlandschaften" class="nav-link" data-scroll-target="#ruinenlandschaften">Ruinenlandschaften</a></li>
   </ul></li>
-  <li><a href="#kabinett" id="toc-kabinett" class="nav-link" data-scroll-target="#kabinett"><span class="header-section-number">3.3.3.2</span> Kabinett</a>
+  <li><a href="#kabinett" id="toc-kabinett" class="nav-link" data-scroll-target="#kabinett">Kabinett</a>
   <ul class="collapse">
-  <li><a href="#wanddekoration-mit-blumengirlanden-1" id="toc-wanddekoration-mit-blumengirlanden-1" class="nav-link" data-scroll-target="#wanddekoration-mit-blumengirlanden-1"><span class="header-section-number">3.3.3.2.1</span> Wanddekoration mit Blumengirlanden</a></li>
+  <li><a href="#wanddekoration-mit-blumengirlanden-1" id="toc-wanddekoration-mit-blumengirlanden-1" class="nav-link" data-scroll-target="#wanddekoration-mit-blumengirlanden-1">Wanddekoration mit Blumengirlanden</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -394,10 +223,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Stuttgart, Schloss Solitude</span></h1>
+<h1 class="title"><span class="chapter-title">Stuttgart, Schloss Solitude</span></h1>
 </div>
 
 
@@ -422,8 +250,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q68">Stuttgart, Schloss Solitude</a> (None)</p>
 <hr>
-<section id="stuttgart-schloss-solitude-kavaliershäuser" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="stuttgart-schloss-solitude-kavaliershäuser"><span class="header-section-number">3.1</span> Stuttgart, Schloss Solitude, Kavaliershäuser</h2>
+<section id="stuttgart-schloss-solitude-kavaliershäuser" class="level2">
+<h2 class="anchored" data-anchor-id="stuttgart-schloss-solitude-kavaliershäuser">Stuttgart, Schloss Solitude, Kavaliershäuser</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="b648f36e1efedcd91e59a0585194b9ae8783dbbfae9257bdc1d00e4b0c3e5bb7.jpeg" class="lightbox" data-gallery="photos" title="Stuttgart, Schloss Solitude, Kavaliershäuser. Foto: Bunz, Achim"><img src="b648f36e1efedcd91e59a0585194b9ae8783dbbfae9257bdc1d00e4b0c3e5bb7.jpeg" class="img-fluid figure-img" alt="Stuttgart, Schloss Solitude, Kavaliershäuser. Foto: Bunz, Achim"></a></p>
@@ -432,8 +260,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q69">Stuttgart, Schloss Solitude, Kavaliershäuser</a> (Bauwerk)</p>
 <hr>
-<section id="sommerspeisesaal" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="sommerspeisesaal"><span class="header-section-number">3.1.1</span> Sommerspeisesaal</h3>
+<section id="sommerspeisesaal" class="level3">
+<h3 class="anchored" data-anchor-id="sommerspeisesaal">Sommerspeisesaal</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="a7be10dbbd3ea77df5f1a1e085cb171f5b6312f2301fbe18011f8418f5e3d071.jpeg" class="lightbox" data-gallery="photos" title="Sommerspeisesaal. Foto: Bunz, Achim"><img src="a7be10dbbd3ea77df5f1a1e085cb171f5b6312f2301fbe18011f8418f5e3d071.jpeg" class="img-fluid figure-img" alt="Sommerspeisesaal. Foto: Bunz, Achim"></a></p>
@@ -442,8 +270,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q70">Sommerspeisesaal</a> (Gebäudeteil)</p>
 <hr>
-<section id="sommerspeisesaal-1" class="level4" data-number="3.1.1.1">
-<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="sommerspeisesaal-1"><span class="header-section-number">3.1.1.1</span> Sommerspeisesaal</h4>
+<section id="sommerspeisesaal-1" class="level4">
+<h4 class="anchored" data-anchor-id="sommerspeisesaal-1">Sommerspeisesaal</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="b6120685ecd5658b07aa004b757e68c6295e4be7742cfb1b9c1bf4f488e8038c.jpeg" class="lightbox" data-gallery="photos" title="Sommerspeisesaal. Foto: Bunz, Achim"><img src="b6120685ecd5658b07aa004b757e68c6295e4be7742cfb1b9c1bf4f488e8038c.jpeg" class="img-fluid figure-img" alt="Sommerspeisesaal. Foto: Bunz, Achim"></a></p>
@@ -452,8 +280,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q71">Sommerspeisesaal</a> (Raum)</p>
 <hr>
-<section id="wanddekoration-mit-blumengirlanden" class="level5" data-number="3.1.1.1.1">
-<h5 data-number="3.1.1.1.1" class="anchored" data-anchor-id="wanddekoration-mit-blumengirlanden"><span class="header-section-number">3.1.1.1.1</span> Wanddekoration mit Blumengirlanden</h5>
+<section id="wanddekoration-mit-blumengirlanden" class="level5">
+<h5 class="anchored" data-anchor-id="wanddekoration-mit-blumengirlanden">Wanddekoration mit Blumengirlanden</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="b6120685ecd5658b07aa004b757e68c6295e4be7742cfb1b9c1bf4f488e8038c.jpeg" class="lightbox" data-gallery="photos" title="Wanddekoration mit Blumengirlanden. Foto: Bunz, Achim"><img src="b6120685ecd5658b07aa004b757e68c6295e4be7742cfb1b9c1bf4f488e8038c.jpeg" class="img-fluid figure-img" alt="Wanddekoration mit Blumengirlanden. Foto: Bunz, Achim"></a></p>
@@ -466,8 +294,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="stuttgart-schloss-solitude-kavaliersbauten" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="stuttgart-schloss-solitude-kavaliersbauten"><span class="header-section-number">3.2</span> Stuttgart, Schloss Solitude, Kavaliersbauten</h2>
+<section id="stuttgart-schloss-solitude-kavaliersbauten" class="level2">
+<h2 class="anchored" data-anchor-id="stuttgart-schloss-solitude-kavaliersbauten">Stuttgart, Schloss Solitude, Kavaliersbauten</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="b648f36e1efedcd91e59a0585194b9ae8783dbbfae9257bdc1d00e4b0c3e5bb7.jpeg" class="lightbox" data-gallery="photos" title="Stuttgart, Schloss Solitude, Kavaliersbauten. Foto: Bunz, Achim"><img src="b648f36e1efedcd91e59a0585194b9ae8783dbbfae9257bdc1d00e4b0c3e5bb7.jpeg" class="img-fluid figure-img" alt="Stuttgart, Schloss Solitude, Kavaliersbauten. Foto: Bunz, Achim"></a></p>
@@ -488,8 +316,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q75">Stuttgart, Schloss Solitude, Kavaliersbauten</a> (Bauwerk)</p>
 <hr>
-<section id="schlosskapelle" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="schlosskapelle"><span class="header-section-number">3.2.1</span> Schlosskapelle</h3>
+<section id="schlosskapelle" class="level3">
+<h3 class="anchored" data-anchor-id="schlosskapelle">Schlosskapelle</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="c0545415e390ca3b4f592fb634c0a2ea028fa30c5c9a0042dba72f770d407087.jpeg" class="lightbox" data-gallery="photos" title="Schlosskapelle. Foto: Bunz, Achim"><img src="c0545415e390ca3b4f592fb634c0a2ea028fa30c5c9a0042dba72f770d407087.jpeg" class="img-fluid figure-img" alt="Schlosskapelle. Foto: Bunz, Achim"></a></p>
@@ -504,8 +332,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q76">Schlosskapelle</a> (Gebäudeteil)</p>
 <hr>
-<section id="vestibül-der-herrschaftsloge" class="level4" data-number="3.2.1.1">
-<h4 data-number="3.2.1.1" class="anchored" data-anchor-id="vestibül-der-herrschaftsloge"><span class="header-section-number">3.2.1.1</span> Vestibül der Herrschaftsloge</h4>
+<section id="vestibül-der-herrschaftsloge" class="level4">
+<h4 class="anchored" data-anchor-id="vestibül-der-herrschaftsloge">Vestibül der Herrschaftsloge</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="c5ab3b4fd58224762c3cceeee40fe299a05410968013a54356103f0b4b82858d.jpeg" class="lightbox" data-gallery="photos" title="Vestibül der Herrschaftsloge. Foto: Bunz, Achim"><img src="c5ab3b4fd58224762c3cceeee40fe299a05410968013a54356103f0b4b82858d.jpeg" class="img-fluid figure-img" alt="Vestibül der Herrschaftsloge. Foto: Bunz, Achim"></a></p>
@@ -514,8 +342,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q81">Vestibül der Herrschaftsloge</a> (Raum)</p>
 <hr>
-<section id="moses-mit-den-gesetzestafeln" class="level5" data-number="3.2.1.1.1">
-<h5 data-number="3.2.1.1.1" class="anchored" data-anchor-id="moses-mit-den-gesetzestafeln"><span class="header-section-number">3.2.1.1.1</span> Moses mit den Gesetzestafeln</h5>
+<section id="moses-mit-den-gesetzestafeln" class="level5">
+<h5 class="anchored" data-anchor-id="moses-mit-den-gesetzestafeln">Moses mit den Gesetzestafeln</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="57ee008fe90a66a188b51679dab84c0296f36c664d0fabc7228bd44be0a3bd17.jpeg" class="lightbox" data-gallery="photos" title="Moses mit den Gesetzestafeln. Foto: Bunz, Achim"><img src="57ee008fe90a66a188b51679dab84c0296f36c664d0fabc7228bd44be0a3bd17.jpeg" class="img-fluid figure-img" alt="Moses mit den Gesetzestafeln. Foto: Bunz, Achim"></a></p>
@@ -526,8 +354,8 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="kapellenraum" class="level4" data-number="3.2.1.2">
-<h4 data-number="3.2.1.2" class="anchored" data-anchor-id="kapellenraum"><span class="header-section-number">3.2.1.2</span> Kapellenraum</h4>
+<section id="kapellenraum" class="level4">
+<h4 class="anchored" data-anchor-id="kapellenraum">Kapellenraum</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="1d3d53a890008473f87ee2b5235fc20eea68371a59c020064370ded8b306f057.jpeg" class="lightbox" data-gallery="photos" title="Kapellenraum. Foto: Bunz, Achim"><img src="1d3d53a890008473f87ee2b5235fc20eea68371a59c020064370ded8b306f057.jpeg" class="img-fluid figure-img" alt="Kapellenraum. Foto: Bunz, Achim"></a></p>
@@ -542,8 +370,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q79">Kapellenraum</a> (Raum)</p>
 <hr>
-<section id="auferstehung-christi" class="level5" data-number="3.2.1.2.1">
-<h5 data-number="3.2.1.2.1" class="anchored" data-anchor-id="auferstehung-christi"><span class="header-section-number">3.2.1.2.1</span> Auferstehung Christi</h5>
+<section id="auferstehung-christi" class="level5">
+<h5 class="anchored" data-anchor-id="auferstehung-christi">Auferstehung Christi</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="7df04781de69afd68ccd5abb5b930980fa826d8104eb7c274f3119c244c2031a.jpeg" class="lightbox" data-gallery="photos" title="Auferstehung Christi. Foto: Bunz, Achim"><img src="7df04781de69afd68ccd5abb5b930980fa826d8104eb7c274f3119c244c2031a.jpeg" class="img-fluid figure-img" alt="Auferstehung Christi. Foto: Bunz, Achim"></a></p>
@@ -560,8 +388,8 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="herrschaftsloge" class="level4" data-number="3.2.1.3">
-<h4 data-number="3.2.1.3" class="anchored" data-anchor-id="herrschaftsloge"><span class="header-section-number">3.2.1.3</span> Herrschaftsloge</h4>
+<section id="herrschaftsloge" class="level4">
+<h4 class="anchored" data-anchor-id="herrschaftsloge">Herrschaftsloge</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="1d3d53a890008473f87ee2b5235fc20eea68371a59c020064370ded8b306f057.jpeg" class="lightbox" data-gallery="photos" title="Herrschaftsloge. Foto: Bunz, Achim"><img src="1d3d53a890008473f87ee2b5235fc20eea68371a59c020064370ded8b306f057.jpeg" class="img-fluid figure-img" alt="Herrschaftsloge. Foto: Bunz, Achim"></a></p>
@@ -570,8 +398,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q77">Herrschaftsloge</a> (Raum)</p>
 <hr>
-<section id="die-andacht" class="level5" data-number="3.2.1.3.1">
-<h5 data-number="3.2.1.3.1" class="anchored" data-anchor-id="die-andacht"><span class="header-section-number">3.2.1.3.1</span> Die Andacht</h5>
+<section id="die-andacht" class="level5">
+<h5 class="anchored" data-anchor-id="die-andacht">Die Andacht</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="7b47af6de9df558e2e09d4cd197d34d2a4d791528d480de6855ddf50cc2f1f1d.jpeg" class="lightbox" data-gallery="photos" title="Die Andacht. Foto: Seeger, Ulrike"><img src="7b47af6de9df558e2e09d4cd197d34d2a4d791528d480de6855ddf50cc2f1f1d.jpeg" class="img-fluid figure-img" alt="Die Andacht. Foto: Seeger, Ulrike"></a></p>
@@ -584,8 +412,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="stuttgart-schloss-solitude-lustschloss" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="stuttgart-schloss-solitude-lustschloss"><span class="header-section-number">3.3</span> Stuttgart, Schloss Solitude, Lustschloss</h2>
+<section id="stuttgart-schloss-solitude-lustschloss" class="level2">
+<h2 class="anchored" data-anchor-id="stuttgart-schloss-solitude-lustschloss">Stuttgart, Schloss Solitude, Lustschloss</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="83a149f0e1b48f06ec39de8b8e1702fca6c702ffe8c880ac59d6585b7b1959fa.jpeg" class="lightbox" data-gallery="photos" title="Stuttgart, Schloss Solitude, Lustschloss. Foto: Bunz, Achim"><img src="83a149f0e1b48f06ec39de8b8e1702fca6c702ffe8c880ac59d6585b7b1959fa.jpeg" class="img-fluid figure-img" alt="Stuttgart, Schloss Solitude, Lustschloss. Foto: Bunz, Achim"></a></p>
@@ -606,12 +434,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q85">Stuttgart, Schloss Solitude, Lustschloss</a> (Bauwerk)</p>
 <hr>
-<section id="erschließungsraumfolge-des-schlosses" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="erschließungsraumfolge-des-schlosses"><span class="header-section-number">3.3.1</span> Erschließungsraumfolge des Schlosses</h3>
+<section id="erschließungsraumfolge-des-schlosses" class="level3">
+<h3 class="anchored" data-anchor-id="erschließungsraumfolge-des-schlosses">Erschließungsraumfolge des Schlosses</h3>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q91">Erschließungsraumfolge des Schlosses</a> (Raumfolge)</p>
 <hr>
-<section id="saal" class="level4" data-number="3.3.1.1">
-<h4 data-number="3.3.1.1" class="anchored" data-anchor-id="saal"><span class="header-section-number">3.3.1.1</span> Saal</h4>
+<section id="saal" class="level4">
+<h4 class="anchored" data-anchor-id="saal">Saal</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="25cabf146b8c75f8913d3fc1783dbe8e04a50b27f7c1b6b552f38b4c5c5ae194.jpeg" class="lightbox" data-gallery="photos" title="Saal. Foto: Bunz, Achim"><img src="25cabf146b8c75f8913d3fc1783dbe8e04a50b27f7c1b6b552f38b4c5c5ae194.jpeg" class="img-fluid figure-img" alt="Saal. Foto: Bunz, Achim"></a></p>
@@ -626,8 +454,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q92">Saal</a> (Raum)</p>
 <hr>
-<section id="zwickelfelder-der-voute" class="level5" data-number="3.3.1.1.1">
-<h5 data-number="3.3.1.1.1" class="anchored" data-anchor-id="zwickelfelder-der-voute"><span class="header-section-number">3.3.1.1.1</span> Zwickelfelder der Voute</h5>
+<section id="zwickelfelder-der-voute" class="level5">
+<h5 class="anchored" data-anchor-id="zwickelfelder-der-voute">Zwickelfelder der Voute</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="d725e04e9ecf4e136fc074f713a55525d77f9878ab0303222fd1f3549dea1d2f.jpeg" class="lightbox" data-gallery="photos" title="Zwickelfelder der Voute. Foto: Bunz, Achim"><img src="d725e04e9ecf4e136fc074f713a55525d77f9878ab0303222fd1f3549dea1d2f.jpeg" class="img-fluid figure-img" alt="Zwickelfelder der Voute. Foto: Bunz, Achim"></a></p>
@@ -643,8 +471,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q93">Zwickelfelder der Voute</a> (Malerei)</p>
 <hr>
 </section>
-<section id="die-regierung-herzog-carl-eugens-befördert-das-wohlergehen-des-landes" class="level5" data-number="3.3.1.1.2">
-<h5 data-number="3.3.1.1.2" class="anchored" data-anchor-id="die-regierung-herzog-carl-eugens-befördert-das-wohlergehen-des-landes"><span class="header-section-number">3.3.1.1.2</span> Die Regierung Herzog Carl Eugens befördert das Wohlergehen des Landes</h5>
+<section id="die-regierung-herzog-carl-eugens-befördert-das-wohlergehen-des-landes" class="level5">
+<h5 class="anchored" data-anchor-id="die-regierung-herzog-carl-eugens-befördert-das-wohlergehen-des-landes">Die Regierung Herzog Carl Eugens befördert das Wohlergehen des Landes</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="2929d37b3d0a97b61bcdac500159106e48f79d7675499c33c0b16075df720245.jpeg" class="lightbox" data-gallery="photos" title="Die Regierung Herzog Carl Eugens befördert das Wohlergehen des Landes. Foto: Bunz, Achim"><img src="2929d37b3d0a97b61bcdac500159106e48f79d7675499c33c0b16075df720245.jpeg" class="img-fluid figure-img" alt="Die Regierung Herzog Carl Eugens befördert das Wohlergehen des Landes. Foto: Bunz, Achim"></a></p>
@@ -674,12 +502,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="prunkappartement-herzog-carl-eugens" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="prunkappartement-herzog-carl-eugens"><span class="header-section-number">3.3.2</span> Prunkappartement Herzog Carl Eugens</h3>
+<section id="prunkappartement-herzog-carl-eugens" class="level3">
+<h3 class="anchored" data-anchor-id="prunkappartement-herzog-carl-eugens">Prunkappartement Herzog Carl Eugens</h3>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q95">Prunkappartement Herzog Carl Eugens</a> (Raumfolge)</p>
 <hr>
-<section id="palmenzimmer" class="level4" data-number="3.3.2.1">
-<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="palmenzimmer"><span class="header-section-number">3.3.2.1</span> Palmenzimmer</h4>
+<section id="palmenzimmer" class="level4">
+<h4 class="anchored" data-anchor-id="palmenzimmer">Palmenzimmer</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="8790a150f215f3cf92bc69637269071cd4fc088963b4e54f156bddde28881579.jpeg" class="lightbox" data-gallery="photos" title="Palmenzimmer. Foto: Bunz, Achim"><img src="8790a150f215f3cf92bc69637269071cd4fc088963b4e54f156bddde28881579.jpeg" class="img-fluid figure-img" alt="Palmenzimmer. Foto: Bunz, Achim"></a></p>
@@ -688,8 +516,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q96">Palmenzimmer</a> (Raum)</p>
 <hr>
-<section id="aurora" class="level5" data-number="3.3.2.1.1">
-<h5 data-number="3.3.2.1.1" class="anchored" data-anchor-id="aurora"><span class="header-section-number">3.3.2.1.1</span> Aurora</h5>
+<section id="aurora" class="level5">
+<h5 class="anchored" data-anchor-id="aurora">Aurora</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="582503e48479be66b50def76850f3b6abbf08be21b34b6943bc23730beeca83a.jpeg" class="lightbox" data-gallery="photos" title="Aurora. Foto: Bunz, Achim"><img src="582503e48479be66b50def76850f3b6abbf08be21b34b6943bc23730beeca83a.jpeg" class="img-fluid figure-img" alt="Aurora. Foto: Bunz, Achim"></a></p>
@@ -701,16 +529,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="sockelgeschoss" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="sockelgeschoss"><span class="header-section-number">3.3.3</span> Sockelgeschoss</h3>
+<section id="sockelgeschoss" class="level3">
+<h3 class="anchored" data-anchor-id="sockelgeschoss">Sockelgeschoss</h3>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q86">Sockelgeschoss</a> (Raumfolge)</p>
 <hr>
-<section id="loggia-zimmer" class="level4" data-number="3.3.3.1">
-<h4 data-number="3.3.3.1" class="anchored" data-anchor-id="loggia-zimmer"><span class="header-section-number">3.3.3.1</span> Loggia-Zimmer</h4>
+<section id="loggia-zimmer" class="level4">
+<h4 class="anchored" data-anchor-id="loggia-zimmer">Loggia-Zimmer</h4>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q87">Loggia-Zimmer</a> (Raum)</p>
 <hr>
-<section id="ruinenlandschaften" class="level5" data-number="3.3.3.1.1">
-<h5 data-number="3.3.3.1.1" class="anchored" data-anchor-id="ruinenlandschaften"><span class="header-section-number">3.3.3.1.1</span> Ruinenlandschaften</h5>
+<section id="ruinenlandschaften" class="level5">
+<h5 class="anchored" data-anchor-id="ruinenlandschaften">Ruinenlandschaften</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="c55a7c1cc6c866c6e04a911dfa133fc016c64762e80c739a7ac60647e0ff93f3.jpeg" class="lightbox" data-gallery="photos" title="Ruinenlandschaften. Foto: Bunz, Achim"><img src="c55a7c1cc6c866c6e04a911dfa133fc016c64762e80c739a7ac60647e0ff93f3.jpeg" class="img-fluid figure-img" alt="Ruinenlandschaften. Foto: Bunz, Achim"></a></p>
@@ -721,8 +549,8 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="kabinett" class="level4" data-number="3.3.3.2">
-<h4 data-number="3.3.3.2" class="anchored" data-anchor-id="kabinett"><span class="header-section-number">3.3.3.2</span> Kabinett</h4>
+<section id="kabinett" class="level4">
+<h4 class="anchored" data-anchor-id="kabinett">Kabinett</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="110f9215beead810a435360536e22d74272e591b153402d55fa2c12e4f96c9c9.jpeg" class="lightbox" data-gallery="photos" title="Kabinett. Foto: Bunz, Achim"><img src="110f9215beead810a435360536e22d74272e591b153402d55fa2c12e4f96c9c9.jpeg" class="img-fluid figure-img" alt="Kabinett. Foto: Bunz, Achim"></a></p>
@@ -737,8 +565,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Wikibase: <a href="https://wikibase.kewl.org/entity/Q89">Kabinett</a> (Raum)</p>
 <hr>
-<section id="wanddekoration-mit-blumengirlanden-1" class="level5" data-number="3.3.3.2.1">
-<h5 data-number="3.3.3.2.1" class="anchored" data-anchor-id="wanddekoration-mit-blumengirlanden-1"><span class="header-section-number">3.3.3.2.1</span> Wanddekoration mit Blumengirlanden</h5>
+<section id="wanddekoration-mit-blumengirlanden-1" class="level5">
+<h5 class="anchored" data-anchor-id="wanddekoration-mit-blumengirlanden-1">Wanddekoration mit Blumengirlanden</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="110f9215beead810a435360536e22d74272e591b153402d55fa2c12e4f96c9c9.jpeg" class="lightbox" data-gallery="photos" title="Wanddekoration mit Blumengirlanden. Foto: Bunz, Achim"><img src="110f9215beead810a435360536e22d74272e591b153402d55fa2c12e4f96c9c9.jpeg" class="img-fluid figure-img" alt="Wanddekoration mit Blumengirlanden. Foto: Bunz, Achim"></a></p>
@@ -757,19 +585,6 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1170,7 +985,7 @@ ul.task-list li input[type="checkbox"] {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./section1.html" class="pagination-link" aria-label="Ausstellung: Stuttgart, Schloss Solitude">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ausstellung: Stuttgart, Schloss Solitude</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Ausstellung: Stuttgart, Schloss Solitude</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
