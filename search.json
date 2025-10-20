@@ -4,9 +4,19 @@
     "href": "index.html",
     "title": "Ein Gemäldekatalog",
     "section": "",
+    "text": "Ensemble",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Ensemble</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#stuttgart-schloss-solitude",
+    "href": "index.html#stuttgart-schloss-solitude",
+    "title": "Ein Gemäldekatalog",
+    "section": "Stuttgart, Schloss Solitude",
     "text": "Stuttgart, Schloss Solitude\nWikibase-Eintrag: Stuttgart, Schloss Solitude\nAdresse: Solitude 1, 70197, Stuttgart, Baden-Württemberg, Deutschland\n\n\n\nStuttgart, Schloss Solitude. Foto: Bunz, Achim",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stuttgart, Schloss Solitude</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Ensemble</span>"
     ]
   },
   {
@@ -74,7 +84,7 @@
     "href": "impressum.html#about-the-demo-prototype",
     "title": "Impressum",
     "section": "About the demo prototype",
-    "text": "About the demo prototype\nThis publication is a prototype made by the Computational Publishing Service of the Open Science Lab at TIB as part of NFDI4Culture research. The prototype is a proof-of-concept demonstration for the use of Jupyter Notebooks and Wikibase to automatically compile linked open data into a multi-format publication and deposit the publication in an academic repository.\nSee the software - (https://github.com/NFDI4Culture/CPS)[https://github.com/NFDI4Culture/CPS]",
+    "text": "About the demo prototype\nThis publication is a prototype made by the Computational Publishing Service of the Open Science Lab at TIB as part of NFDI4Culture research. The prototype is a proof-of-concept demonstration for the use of Jupyter Notebooks and Wikibase to automatically compile linked open data into a multi-format publication and deposit the publication in an academic repository.\nSee the software - https://github.com/NFDI4Culture/CPS",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Impressum</span>"
     ]
